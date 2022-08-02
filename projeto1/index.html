@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>DEVinKnowledge</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+           
+            <!-- <img src="./issues/img/dica1.jpg" alt="dica"> -->
+        </header>
+
+        <div class="form-image">
+            <img src="assets/img/undraw_engineering_team_a7n2.svg" alt="">
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+
+                    <div class="title">
+                        <h1>DEVinKnowledge</h1><br>
+                        <h3>Insira sua dica</h3>
+                        <p>Página exclusiva para compartilhamento de dicas.</p>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" minlength="8" maxlength="64"
+                            placeholder="Insira o título" required><br>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="linguagem-Skill">Linguagem/Skill</label>
+                        <input type="text" id="linguagem" minlength="4" maxlength="16" placeholder="Insira a Linguagem"
+                            required><br>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Categoria</label>
+                        <select name="categoria" id="categoria1">
+                            <option value="">FrontEnd</option>
+                            <option value="">BackEnd</option>
+                            <option value="">FullStack</option>
+                            <option value="">Comportamental/Soft</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="url">Descrição</label>
+                        <textarea name="" id="descricao" cols="20" rows="10" minlength="32" maxlength="512"
+                            required>Insira o detalhamento da sua dica</textarea><br>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="url">Url</label>
+                        <input type="url" name="" id="video" placeholder="Insira a URL do vídeo"><br>
+                    </div>
+
+                    <div class="botao-salvar">
+                        <button onclick="salvar">Salvar</button><br><b></b>
+
+                    </div>
+
+                    <div class="botao-limpar">
+                        <button onclick="limpar">Limpar</button>
+                    </div>
+            </form>
+        </div>
+
+
+
+
+</body>
+
+</html>
