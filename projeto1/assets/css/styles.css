@@ -16,6 +16,24 @@ body{
     background-color: gray;
 }
 
+main.cards{
+    display: flex;
+}
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: coral;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 50px;
+    margin-left: 20px;
+}
+
+main.cards section.cards:first-child{
+    margin-left: 0;
+}
+
 .container {
     width: 80%;
     height: 80vh;
@@ -23,18 +41,6 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 212) ;
 }
 
-.form-image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: coral;
-    padding: 1rem;
-}
-
-.form-image img{
-    width: 41rem;
-}
 
 .form {
     width: 50%;
@@ -71,8 +77,8 @@ body{
 }
 
 .input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem;
+    margin: 0.4rem 0;
+    padding: 0.6rem;
     border: none;
     border-radius:10px;
     box-shadow: 1px 1px 6px #0000001c;
@@ -111,6 +117,13 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+
+.main cards {
+    display: flex;
+}
+
+
+
 
 @media screen and (max-width: 1330px) {
     .form-image{
