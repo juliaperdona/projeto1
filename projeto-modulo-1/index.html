@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/informacoes.svg" type="image/x-icon">
+    <title>DEVinKnowledge</title>
+</head>
+
+<body>
+    <header class="titulo">
+        <h1>DEVinKnowledge</h1><br>
+        <h3>Insira sua dica</h3>
+        <p>Página exclusiva para compartilhamento de dicas.</p>
+
+
+    </header>
+
+    <main>
+        <section class="esquerda">
+            <form action="" class="form">
+                <div class="input-box">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" minlength="8" maxlength="64"
+                        placeholder="Insira o título" required><br>
+                </div>
+                <div class="input-box">
+                    <label for="linguagem-Skill">Linguagem/Skill</label>
+                    <input type="text" id="linguagem" minlength="4" maxlength="16" placeholder="Insira a Linguagem"
+                        required><br>
+                </div>
+                <div class="input-box">
+                    <label for="">Categoria</label>
+                    <select name="categoria" id="categoria1">
+                        <option value="">FrontEnd</option>
+                        <option value="">BackEnd</option>
+                        <option value="">FullStack</option>
+                        <option value="">Comportamental/SoftSkills</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="url">Descrição</label>
+                    <textarea name="" id="descricao" cols="20" rows="10" minlength="32" maxlength="512"
+                        placeholder="Insira o detalhamento da sua dica" required></textarea><br>
+                </div>
+
+                <div class="input-box">
+                    <label for="url">Vídeo</label>
+                    <input type="url" name="" id="video" placeholder="Insira a URL do vídeo"><br>
+                </div>
+
+                <div class="botoes">
+                    <button onclick="salvar">Salvar</button>
+                    <button onclick="limpar">Limpar</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="direita">
+
+            <div class="container">
+                <div class="cards-contador">
+
+                    <div class="card total">
+                        <h3>Total</h3>
+                        <span>40</span>
+                    </div>
+
+                    <div class="card frontEnd">
+                        <h3>FrontEnd</h3>
+                        <span>5</span>
+                    </div>
+
+                    <div class="card backEnd">
+                        <h3>BackEnd</h3>
+                        <span>65</span>
+                    </div>
+
+                    <div class="card fullStack">
+                        <h3>FullStack</h3>
+                        <span>70</span>
+                    </div>
+
+                    <div class="card comportamental-Soft">
+                        <h3>SoftSkills</h3>
+                        <span>3</span>
+                    </div>
+                </div>
+
+                <div class="buscar">
+                    <div class="input-box">
+                        <input type="search" id="buscar" placeholder="Buscar">
+                    </div>
+
+                    <div class="botoes">
+                        <button id="pesquisar">Pesquisar</button>
+                        <button id="limpar-pesquisa">Limpar</button>
+                    </div>
+                </div>
+
+                <div class="cards" id="lista-cards">
+
+                    <div id="card-dica">
+                        <h3>titulo dica</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
+                            molestias
+                            inventore excepturi</p>
+                        <div class="botoes">
+                            <button>Vídeo</button>
+                            <button onclick="editar">Editar</button>
+                            <button onclick="excluir">Excluir</button>
+                        </div>
+
+                    </div>
+
+                    <div id="card-dica">
+                        <h3>titulo dica</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
+                            molestias
+                            inventore excepturi</p>
+                        <div class="botoes">
+                            <button>Vídeo</button>
+                            <button onclick="editar">Editar</button>
+                            <button onclick="excluir">Excluir</button>
+                        </div>
+                    </div>
+
+                    <div id="card-dica">
+                        <h3>titulo dica</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
+                            molestias
+                            inventore excepturi</p>
+                        <div class="botoes">
+                            <button>Vídeo</button>
+                            <button onclick="editar">Editar</button>
+                            <button onclick="excluir">Excluir</button>
+                        </div>
+                    </div>
+
+                    <div id="card-dica">
+                        <h3>titulo dica</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
+                            molestias
+                            inventore excepturi</p>
+                        <div class="botoes">
+                            <button>Vídeo</button>
+                            <button onclick="editar">Editar</button>
+                            <button onclick="excluir">Excluir</button>
+                        </div>
+                    </div>
+
+                    <div id="card-dica">
+                        <h3>titulo dica</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
+                            molestias
+                            inventore excepturi</p>
+                        <div class="botoes">
+                            <button>Vídeo</button>
+                            <button onclick="editar">Editar</button>
+                            <button onclick="excluir">Excluir</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+</body>
+
+</html>

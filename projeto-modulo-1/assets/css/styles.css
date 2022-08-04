@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    padding-left: 50px;
+    margin-top: 30px;
+}
+
+.titulo h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: coral;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+main{
+    height: 70rem;
+    width: 100%;
+    display: flex;
+}
+.esquerda{
+    width: 40%;
+    height: 70rem;
+}
+
+.direita{
+    width: 60%;
+    height: 70rem;
+    background:azure;
+}
+
+.form{
+    height: 60%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+.input-box input {
+    margin: 0.4rem 0;
+    padding: 0.6rem;
+    border: none;
+    border-radius:10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box select {
+    margin: 0.6rem 0;
+    padding: 0.8rem;
+    border: none;
+    border-radius:10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box textarea {
+    margin: 0.6rem 0;
+    padding: 0.8rem;
+    border: none;
+    border-radius:10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.botoes button{
+    border: none;
+    background-color: coral;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px;
+    right: 200px;
+}
+
+.cards-contador{
+    display: flex;
+    width: 60%;
+}
+.cards-contador div.card {
+    flex-direction: column;
+    text-align: center;
+    background-color: coral;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.cards-contador div.cards:first-child{
+    margin-left: 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 1em 0;
+    margin-bottom: 100px;
+  }
+
+  #card-dica {
+    min-width: 200px;
+    width: 25%;
+    background-color:white;
+    border: 1px solid rgba(234, 110, 110, 0.1);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
