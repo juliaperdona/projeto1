@@ -15,13 +15,11 @@
         <h1>DEVinKnowledge</h1><br>
         <h3>Insira sua dica</h3>
         <p>Página exclusiva para compartilhamento de dicas.</p>
-
-
     </header>
 
     <main>
         <section class="esquerda">
-            <form action="" class="form">
+            <form action="" class="form" id="formulario">
                 <div class="input-box">
                     <label for="titulo">Título</label>
                     <input type="text" name="titulo" id="titulo" minlength="8" maxlength="64"
@@ -35,15 +33,15 @@
                 <div class="input-box">
                     <label for="">Categoria</label>
                     <select name="categoria" id="categoria1">
-                        <option value="">FrontEnd</option>
-                        <option value="">BackEnd</option>
-                        <option value="">FullStack</option>
-                        <option value="">Comportamental/SoftSkills</option>
+                        <option value="frontEnd">FrontEnd</option>
+                        <option value="backEnd">BackEnd</option>
+                        <option value="fullStack">FullStack</option>
+                        <option value="softSkills">Comportamental/SoftSkills</option>
                     </select>
                 </div>
                 <div class="input-box">
                     <label for="url">Descrição</label>
-                    <textarea name="" id="descricao" cols="20" rows="10" minlength="32" maxlength="512"
+                    <textarea name="" id="descricao" cols="20" rows="5" minlength="32" maxlength="512"
                         placeholder="Insira o detalhamento da sua dica" required></textarea><br>
                 </div>
 
@@ -53,8 +51,8 @@
                 </div>
 
                 <div class="botoes">
-                    <button onclick="salvarDica()" id="salvar">Salvar</button>
-                    <button onclick="limpar" id="limpar">Limpar</button>
+                    <button type="submit" id="salvar">Salvar</button>
+                    <button type="reset">Limpar</button>
                 </div>
 
             </form>
@@ -97,81 +95,35 @@
                     </div>
 
                     <div class="botoes">
-                        <button id="pesquisar">Pesquisar</button>
-                        <button id="limpar-pesquisa">Limpar</button>
+                        <button type="submit" id="pesquisar">Pesquisar</button>
+                        <button type="reset">Limpar</button>
                     </div>
                 </div>
 
-                <div class="cards" id="lista-cards">
+                <ul class="cards" id="lista-cards">
 
-                    <div id="card-dica">
+                    <li id="card-dica">
                         <h3>titulo dica</h3>
+                        <h5>Linguagem/Skill:</h5>
+                        <h5>Categoria:</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
                             molestias
                             inventore excepturi</p>
                         <div class="botoes">
-                            <button>Vídeo</button>
+                            <a href="" target="_blank"><button>Vídeo</button></a>
                             <button onclick="editar">Editar</button>
-                            <button onclick="excluir">Excluir</button>
+                            <button onclick="excluir()" id="excluir">Excluir</button>
                         </div>
+                    </li>
 
-                    </div>
 
-                    <div id="card-dica">
-                        <h3>titulo dica</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
-                            molestias
-                            inventore excepturi</p>
-                        <div class="botoes">
-                            <button>Vídeo</button>
-                            <button onclick="editar">Editar</button>
-                            <button onclick="excluir">Excluir</button>
-                        </div>
-                    </div>
-
-                    <div id="card-dica">
-                        <h3>titulo dica</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
-                            molestias
-                            inventore excepturi</p>
-                        <div class="botoes">
-                            <button>Vídeo</button>
-                            <button onclick="editar">Editar</button>
-                            <button onclick="excluir">Excluir</button>
-                        </div>
-                    </div>
-
-                    <div id="card-dica">
-                        <h3>titulo dica</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
-                            molestias
-                            inventore excepturi</p>
-                        <div class="botoes">
-                            <button>Vídeo</button>
-                            <button onclick="editar">Editar</button>
-                            <button onclick="excluir">Excluir</button>
-                        </div>
-                    </div>
-
-                    <div id="card-dica">
-                        <h3>titulo dica</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus cumque eveniet at
-                            molestias
-                            inventore excepturi</p>
-                        <div class="botoes">
-                            <button>Vídeo</button>
-                            <button onclick="editar">Editar</button>
-                            <button onclick="excluir">Excluir</button>
-                        </div>
-                    </div>
-
-                </div>
+                </ul>
             </div>
 
 
         </section>
     </main>
- <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
