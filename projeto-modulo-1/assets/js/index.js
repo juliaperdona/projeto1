@@ -141,12 +141,12 @@ function totalSoftSkills() {
 }
 totalSoftSkills()
 
-function buscar() {
-    function busca() {
-        return document.getElementById("pesquisar")
-    }
-    let pesquisa = dados.filter(busca)
-    
 
-}
-buscar()
+const busca = document.getElementById("buscar");
+busca.addEventListener("input", (e) => {
+    const filtroBusca = e.target.value;
+    const cardFiltrado = dados.filter((element) => {
+        return element.titulo.toLowerCase().includes(filtroBusca);
+    });
+    console.log(cardFiltrado)
+});
