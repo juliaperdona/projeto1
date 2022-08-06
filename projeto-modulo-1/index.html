@@ -11,10 +11,43 @@
 </head>
 
 <body>
-    <header class="titulo">
-        <h1>DEVinKnowledge</h1><br>
-        <h3>Insira sua dica</h3>
-        <p>Página exclusiva para compartilhamento de dicas.</p>
+    <header class="cabecalho">
+
+        <div class="titulo">
+            <h1>DEVinKnowledge</h1><br>
+            <h3>Insira sua dica</h3>
+            <p>Página exclusiva para compartilhamento de dicas.</p>
+        </div>
+        
+        <div class="container">
+            <div class="cards-contador">
+
+                <div class="card total">
+                    <h3>Total</h3>
+                    <span id="total">40</span>
+                </div>
+
+                <div class="card frontEnd">
+                    <h3>FrontEnd</h3>
+                    <span id="totalFrontEnd"></span>
+                </div>
+
+                <div class="card backEnd">
+                    <h3>BackEnd</h3>
+                    <span id="totalBackEnd"></span>
+                </div>
+
+                <div class="card fullStack">
+                    <h3>FullStack</h3>
+                    <span id="totalFullStack"></span>
+                </div>
+
+                <div class="card comportamental-Soft">
+                    <h3>SoftSkills</h3>
+                    <span id="totalSoftSkills"></span>
+                </div>
+            </div>
+
     </header>
 
     <main>
@@ -60,41 +93,13 @@
 
         <section class="direita">
 
-            <div class="container">
-                <div class="cards-contador">
-
-                    <div class="card total">
-                        <h3>Total</h3>
-                        <span>40</span>
-                    </div>
-
-                    <div class="card frontEnd">
-                        <h3>FrontEnd</h3>
-                        <span>5</span>
-                    </div>
-
-                    <div class="card backEnd">
-                        <h3>BackEnd</h3>
-                        <span>65</span>
-                    </div>
-
-                    <div class="card fullStack">
-                        <h3>FullStack</h3>
-                        <span>70</span>
-                    </div>
-
-                    <div class="card comportamental-Soft">
-                        <h3>SoftSkills</h3>
-                        <span>3</span>
-                    </div>
-                </div>
-
+            
                 <div class="buscar">
-                    <div class="input-box">
+                    <div class="input-box search">
                         <input type="search" id="buscar" placeholder="Buscar">
                     </div>
 
-                    <div class="botoes">
+                    <div class="botoes-search">
                         <button type="submit" id="pesquisar">Pesquisar</button>
                         <button type="reset">Limpar</button>
                     </div>
@@ -110,7 +115,7 @@
                             molestias
                             inventore excepturi</p>
                         <div class="botoes">
-                            <a href="" target="_blank"><button>Vídeo</button></a>
+                            <a href="" target="_blank" ><button>Vídeo</button></a>
                             <button onclick="editar">Editar</button>
                             <button onclick="excluir()" id="excluir">Excluir</button>
                         </div>

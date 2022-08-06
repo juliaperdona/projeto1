@@ -13,7 +13,11 @@ body{
 header{
     padding-left: 50px;
     margin-top: 30px;
+    display: flex;
 }
+ header.titulo {
+    flex-direction: column;
+ }
 
 .titulo h1::after {
     content: '';
@@ -93,6 +97,21 @@ resize: none;
     right: 200px;
 }
 
+.buscar{
+    display: flex;
+}
+.search{
+    width: 200px;
+}
+.botoes-search button{
+    border: none;
+    background-color: coral;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px;
+    right: 200px;
+}
+
 .cards-contador{
     display: flex;
     width: 60%;
@@ -127,5 +146,6 @@ resize: none;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
+    word-wrap: break-word;
   }
 
