@@ -44,6 +44,7 @@ main{
     width: 60%;
     height: 70rem;
     background:azure;
+    border-radius: 10px;
 }
 
 .form{
@@ -102,6 +103,8 @@ resize: none;
 }
 .search{
     width: 200px;
+    margin-left: 20px;
+    
 }
 .botoes-search button{
     border: none;
@@ -135,9 +138,10 @@ resize: none;
     gap: 1em;
     margin: 1em 0;
     margin-bottom: 100px;
+    margin-left: 10px;
   }
 
-  #card-dica {
+#card-dica {
     min-width: 200px;
     width: 33%;
     background-color:white;
