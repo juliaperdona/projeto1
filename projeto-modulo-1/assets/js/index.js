@@ -1,7 +1,14 @@
-const formulario = document.getElementById("formulario");
-formulario.onsubmit = salvarDica;
+import { total, totalFrontEnd, totalBackEnd, totalFullStack, totalSoftSkills } from "./cards-contador.js"
 
+form.onsubmit = salvarDica;
+
+total()
+totalFrontEnd()
+totalBackEnd()
+totalFullStack()
+totalSoftSkills()
 var dados = JSON.parse(localStorage.getItem("Dados")) || [];
+let edicaoId;
 
 function salvarDica(event) {
     event.preventDefault();
@@ -34,18 +41,16 @@ function salvarDica(event) {
     totalBackEnd()
     totalFullStack()
     totalSoftSkills()
-    criarCard()
+    criarCard(dados)
     alert("Dica cadastrada!")
 
 }
 
-function criarCard() {
-    const dados = JSON.parse(localStorage.getItem("Dados"));
+function criarCard(elemento) {
     const listaCards = document.getElementById('lista-cards')
     let card = ''
-    dados.forEach(element => {
+    elemento.forEach(element => {
         card +=
-
             `<li id="card-dica">
                 <h3>${element.titulo}</h3>
                 <h5>Linguagem/Skill:${element.linguagem}</h5>
@@ -53,7 +58,7 @@ function criarCard() {
                 <p>${element.descricao}</p>
                         <div class="botoes">
                             <a href="${element.video}" target="_blank"><button>Vídeo</button></a>
-                            <button onclick="editar">Editar</button>
+                            <button onclick="editar(${element.id})">Editar</button>
                             <button onclick="excluir(${element.id})" id="excluir">Excluir</button>
                         </div>
             </li>`
@@ -62,6 +67,7 @@ function criarCard() {
     });
 }
 
+criarCard(dados)
 
 function excluir(elementId) {
     if (window.confirm("Você deseja excluir?")) {
@@ -78,75 +84,55 @@ function excluir(elementId) {
         totalFullStack()
         totalSoftSkills()
         total()
-        criarCard()
+        criarCard(dados)
         alert("Dica excluída")
     }
 }
 
-criarCard()
-
-function total() {
-    let contadorCards = dados.length;
-    let contadorTotal = document.getElementById("total");
-    contadorTotal.innerText = contadorCards
-}
-
-total()
-
-function totalFrontEnd() {
-    function frontEnd(element) {
-        return element.categoria == "frontEnd"
-    }
-
-    let contadorFrontEnd = dados.filter(frontEnd)
-    let contadorTotalFront = contadorFrontEnd.length
-    let contadorTotal = document.getElementById("totalFrontEnd");
-    contadorTotal.innerText = contadorTotalFront
-}
-totalFrontEnd()
-
-function totalBackEnd() {
-    function backEnd(element) {
-        return element.categoria == "BackEnd"
-    }
-
-    let contadorBackEnd = dados.filter(backEnd)
-    let contadorTotalBack = contadorBackEnd.length
-    let contadorTotal = document.getElementById("totalBackEnd");
-    contadorTotal.innerText = contadorTotalBack
-}
-totalBackEnd()
-
-function totalFullStack() {
-    function fullStack(element) {
-        return element.categoria == "fullStack"
-    }
-    let contadorFullStack = dados.filter(fullStack)
-    let contadorTotalFull = contadorFullStack.length
-    let contadorTotal = document.getElementById("totalFullStack");
-    contadorTotal.innerText = contadorTotalFull
-}
-totalFullStack()
-
-function totalSoftSkills() {
-
-    function softSkills(element) {
-        return element.categoria == "softSkills"
-    }
-
-    let contadorSoftSkills = dados.filter(softSkills)
-    let contadorTotalSoft = contadorSoftSkills.length
-    let contadorTotal = document.getElementById("totalSoftSkills");
-    contadorTotal.innerText = contadorTotalSoft
-}
-totalSoftSkills()
+criarCard(dados)
 
 
-const busca = document.getElementById("buscar");
-busca.addEventListener("input", (e) => {
-    const filtroBusca = e.target.value;
+buscar.addEventListener("input", (e) => {
+    const filtroBusca = e.target.value.toLowerCase();
     const cardFiltrado = dados.filter((element) => {
         return element.titulo.toLowerCase().includes(filtroBusca);
     });
-    console.log(cardFiltrado)
+    criarCard(cardFiltrado);
 });
+
+function editar(elementId) {
+    if (confirm("Deseja realizar a edição do card?")) {
+        const [editarCard] = dados.filter(({ id }) => {
+            return id == elementId;
+        });
+        document.getElementById("titulo").value = editarCard.titulo;
+        document.getElementById("linguagem").value = editarCard.linguagem;
+        document.getElementById("categoria1").value = editarCard.categoria;
+        document.getElementById("descricao").value = editarCard.descricao;
+        document.getElementById("video").value = editarCard.video;
+        edicaoId = elementId;
+        formulario.onsubmit = salvarEdit;
+    }
+}
+
+function salvarEdit() {
+    const novosDados = dados.map((dado) => {
+        if (dado.id == edicaoId) {
+            return {
+                titulo: document.getElementById("titulo").value,
+                linguagem: document.getElementById("linguagem").value,
+                categoria: document.getElementById("categoria1").value,
+                descricao: document.getElementById("descricao").value,
+                video: document.getElementById("video").value,
+                id: edicaoId,
+            };
+        }
+        return dado;
+    });
+    dados = novosDados;
+    localStorage.setItem("Dados", JSON.stringify(novosDados));
+    formulario.onsubmit = salvarDica;
+    edicaoId = "";
+    alert("Card editado");
+    criarCard(dados);
+}

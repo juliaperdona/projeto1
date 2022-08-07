@@ -24,7 +24,7 @@
 
                 <div class="card total">
                     <h3>Total</h3>
-                    <span id="total">40</span>
+                    <span id="total"></span>
                 </div>
 
                 <div class="card frontEnd">
@@ -52,7 +52,7 @@
 
     <main>
         <section class="esquerda">
-            <form action="" class="form" id="formulario">
+            <form action="" class="form" id="form">
                 <div class="input-box">
                     <label for="titulo">Título</label>
                     <input type="text" name="titulo" id="titulo" minlength="8" maxlength="64"
@@ -98,10 +98,6 @@
                     <div class="input-box search">
                         <input type="search" id="buscar" placeholder="Buscar">
                     </div>
-
-                    <div class="botoes-search">
-                        <button type="reset">Limpar</button>
-                    </div>
                 </div>
 
                 <ul class="cards" id="lista-cards">
@@ -115,19 +111,19 @@
                             inventore excepturi</p>
                         <div class="botoes">
                             <a href="" target="_blank" ><button>Vídeo</button></a>
-                            <button onclick="editar">Editar</button>
+                            <button onclick="editar()" id="editar">Editar</button>
                             <button onclick="excluir()" id="excluir">Excluir</button>
                         </div>
                     </li>
 
 
                 </ul>
-            </div>
+        
 
 
         </section>
     </main>
-    <script src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
 </body>
 
 </html>
